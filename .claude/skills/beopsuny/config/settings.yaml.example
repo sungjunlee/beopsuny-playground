@@ -1,0 +1,44 @@
+# ============================================================
+# 법순이 (Beopsuny) 사용자 설정
+# User Configuration for Beopsuny
+# ============================================================
+# 이 파일을 settings.yaml로 복사한 후 API 키를 입력하세요.
+# Copy this file to settings.yaml and fill in your API keys.
+#
+# 또는 환경변수 사용 (Claude Code Web, Codex Cloud 권장):
+#   export BEOPSUNY_OC_CODE="your_oc_code"
+#   export BEOPSUNY_ASSEMBLY_API_KEY="your_api_key"
+# ============================================================
+
+# 국가법령정보 OC 코드 (필수)
+# National Law Information Center OC Code (Required)
+# 발급: https://open.law.go.kr
+# 가입 이메일의 @ 앞부분 (예: user@gmail.com → user)
+oc_code: "your_oc_code"
+
+# 열린국회정보 API 키 (선택 - 국회 의안 조회용)
+# National Assembly API Key (Optional - for bill tracking)
+# 발급: https://open.assembly.go.kr
+# assembly_api_key: "your_api_key"
+
+# ============================================================
+# 게이트웨이 설정 (해외 접근용)
+# Gateway Settings (for overseas access)
+# ============================================================
+# 한국 정부 API는 해외 IP를 차단합니다.
+# Claude Code Web 등 해외 환경에서 사용 시 게이트웨이 설정이 필요합니다.
+#
+# cors-anywhere 기반 게이트웨이를 통해 접근합니다.
+# URL은 Base64URL로 인코딩되어 Cloudflare WAF를 우회합니다.
+#
+# 환경변수로도 설정 가능 (환경변수가 우선함):
+#   export BEOPSUNY_GATEWAY_URL="https://your-gateway.example.com"
+#   export BEOPSUNY_GATEWAY_API_KEY="your-api-key"  # 선택
+# ============================================================
+
+# gateway:
+#   # cors-anywhere 게이트웨이 URL
+#   url: "https://your-gateway.example.com"
+#
+#   # API 키 (게이트웨이에서 인증 설정 시)
+#   # api_key: "your-api-key"
