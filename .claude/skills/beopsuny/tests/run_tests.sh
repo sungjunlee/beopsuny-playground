@@ -41,7 +41,7 @@ run_local_tests() {
     # 링크 생성 테스트
     echo ""
     echo "▶ 링크 생성 테스트..."
-    if python tests/test_link_generation.py; then
+    if python3 tests/test_link_generation.py; then
         ((passed++))
         echo -e "${GREEN}✓ test_link_generation.py PASSED${NC}"
     else
@@ -52,7 +52,7 @@ run_local_tests() {
     # XML 파싱 테스트
     echo ""
     echo "▶ XML 파싱 테스트..."
-    if python tests/test_parsing.py; then
+    if python3 tests/test_parsing.py; then
         ((passed++))
         echo -e "${GREEN}✓ test_parsing.py PASSED${NC}"
     else
@@ -86,7 +86,7 @@ run_api_tests() {
     if [ -f "tests/test_integration.py" ]; then
         echo ""
         echo "▶ 통합 테스트..."
-        if python tests/test_integration.py; then
+        if python3 tests/test_integration.py; then
             echo -e "${GREEN}✓ test_integration.py PASSED${NC}"
             return 0
         else
